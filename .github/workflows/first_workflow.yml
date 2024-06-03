@@ -8,3 +8,5 @@ jobs:
         uses: actions/checkout@v4
       - name: Display content
         run: ls -la
+      - name: read content
+        run: cat README.md
