@@ -1,10 +1,10 @@
-name: First_Workflow
-on: workflow_dispatch
+name: Using action
+on: push
 jobs:
-  first-job:
+  use_actons:
     runs-on: ubuntu-latest
     steps:
-      - name: run parallel
-        run: |
-          echo "Hello"
-          echo "Bye"
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Display content
+        run: ls -la
