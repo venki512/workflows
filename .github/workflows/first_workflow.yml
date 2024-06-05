@@ -3,12 +3,15 @@ on: push
 jobs:
   Upload-Artifacts:
     runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.dummy.outputs.name }}
     steps:
       - name: create dummy files
+        id: dummy
         run: |
           mkdir dist
           cd dist
-          touch file1 file2 file3 file4 file5
+          echo "name=hello" >> $GITHUB_OUTPUT
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -24,5 +27,7 @@ jobs:
           name: test-upload
       - name: display content
         run: ls
+      - name: read output
+        run: echo "output value is ${{ needs.Upload-Artifacts.outputs.output1 }}"
         
           
