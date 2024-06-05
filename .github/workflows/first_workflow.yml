@@ -1,12 +1,8 @@
-name: Using action
+name: Event Details
 on: push
 jobs:
-  use_actons:
+  Event-Details:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Display content
-        run: ls -la
-      - name: read content
-        run: cat README.md
+      - name: Get Context
+        run: echo "${{ toJson(github)}}
