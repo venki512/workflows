@@ -1,8 +1,16 @@
-name: Event Details
+name: Upload and Download Artifacts
 on: push
 jobs:
-  Event-Details:
+  Upload-Artifacts:
     runs-on: ubuntu-latest
     steps:
-      - name: Get Context
-        run: echo "${{ toJson(github.event.commits)}}"
+      - name: create dummy files
+        run: |
+          mkdir dist
+          cd dist
+          touch file1 file2 file3 file4 file5
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-upload
+          
