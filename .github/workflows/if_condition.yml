@@ -2,14 +2,11 @@ name: Conditional Workflow Test
 on: push
 jobs:
   Test:
-    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello
+        id: test
         run: echos "Hello"
-  Deploy:
-    needs: Test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run after test
+      - name: Test result
+        # if: failure() && steps.test.outcome == 'failure'
         run: echo "Test is success"
