@@ -11,5 +11,4 @@ jobs:
         id: test
         run: echo "Hello"
       - name: Test result
-        if: failure() && steps.test.outcome == 'failure'
         run: echo "Test is success"
