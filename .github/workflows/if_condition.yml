@@ -2,6 +2,7 @@ name: Conditional Workflow Test
 on: push
 jobs:
   Test:
+    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello
