@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Print Hello
         id: test
-        run: echos "Hello"
+        run: echo "Hello"
       - name: Test result
         if: failure() && steps.test.outcome == 'failure'
         run: echo "Test is success"
