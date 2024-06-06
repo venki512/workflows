@@ -1,0 +1,13 @@
+name: Conditional Workflow Test
+on: push
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello
+        run: echo "Hello"
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run after test
+        run: echo "Test is success"
