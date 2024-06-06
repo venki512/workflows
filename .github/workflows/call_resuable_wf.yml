@@ -2,4 +2,4 @@ name: call workflow
 on: push
 jobs:
   Test:
-    uses: ./github/workflows/resuable_workflow.yml
+    uses: ./.github/workflows/resuable_workflow.yml
