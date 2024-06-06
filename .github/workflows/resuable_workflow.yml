@@ -1,9 +1,16 @@
 name: resuable workflow
-on: workflow_call
+on: 
+  workflow_call:
+    inputs:
+      name:
+        required: false
+        default: test
+        description: passing value
+        type: string
 jobs: 
   Test:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Hellow from resuable
-        run: echo "Hi from resuable workflow"
+      - name: Print 
+        run: echo "Hi this is ${{ inputs.name }} resuable workflow"
     
