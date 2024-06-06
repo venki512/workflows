@@ -3,3 +3,5 @@ on: push
 jobs:
   Test:
     uses: ./.github/workflows/resuable_workflow.yml
+    with:
+      name: venki
