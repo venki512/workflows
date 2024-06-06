@@ -8,5 +8,5 @@ jobs:
         id: test
         run: echos "Hello"
       - name: Test result
-        # if: failure() && steps.test.outcome == 'failure'
+        if: failure() && steps.test.outcome == 'failure'
         run: echo "Test is success"
