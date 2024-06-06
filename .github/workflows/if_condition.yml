@@ -4,7 +4,9 @@ jobs:
   Test:
     strategy:
       matrix:
-        runners: [ubuntu-latest, windows-latest]
+        runners: [ubuntu-latest]
+        include:
+          - runners: windows-latest
     runs-on: ${{ matrix.runners }}
     steps:
       - name: Print Hello
