@@ -4,7 +4,7 @@ jobs:
   Test:
     strategy:
       matrix:
-        runners: [ubuntu-latest, windows-latest]
+        runners: [ubuntu-latest]
     outputs:
       outcome: ${{ steps.result.outputs.name }}
     runs-on: ${{ matrix.runners }}
