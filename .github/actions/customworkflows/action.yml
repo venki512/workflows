@@ -1,9 +1,13 @@
 name: 'first-cstm-action'
 description: 'This is my first custom action'
+inputs:
+  name:
+    required: false
+    default: first
 runs:
   using: 'composite'
   steps:
     - name: Print
-      run: echo "This is my first composite custom action"
+      run: echo "This is my ${{ inputs.name }} composite custom action"
       shell: bash
       
