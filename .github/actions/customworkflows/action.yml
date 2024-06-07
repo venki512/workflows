@@ -5,4 +5,5 @@ runs:
   steps:
     - name: Print
       run: echo "This is my first composite custom action"
+      shell: bash
       
