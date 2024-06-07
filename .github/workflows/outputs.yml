@@ -1,0 +1,18 @@
+name: Testing Outputs
+on: push
+jobs:
+  Test:
+    outputs:
+      outcome: ${{ steps.result.outputs.name }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Export output
+        id: result
+        run: echo "name=Hello" >> $GITHUB_OUTPUT
+  Build:
+    needs: Test
+    runs-on: ubuntu-latest
+    steps:  
+      - name: Read output
+        run: echo "The output is ${{ needs.Test.outputs.outcome }}"
+        
