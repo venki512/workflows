@@ -26,4 +26,4 @@ jobs:
         with:
           name: second
       - name: Print output
-        run: echo "Output is ${{ steps.result.outputs.name }}
+        run: echo "Output is ${{ steps.result.outputs.outcome }}
