@@ -1,5 +1,5 @@
 name: call workflow
-on: push
+on: workflow_dispatch
 jobs:
   Test:
     uses: ./.github/workflows/resuable_workflow.yml
