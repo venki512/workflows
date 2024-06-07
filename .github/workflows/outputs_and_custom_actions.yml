@@ -21,7 +21,9 @@ jobs:
       - name: Read output
         run: echo "The output is ${{ needs.Test.outputs.outcome }}"
       - name: calling cutom action
+        id: result
         uses: ./.github/actions/customworkflows
         with:
           name: second
-        
+      - name: Print output
+        run: echo "Output is ${{ steps.result.outputs.name }}
