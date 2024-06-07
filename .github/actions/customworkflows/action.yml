@@ -4,10 +4,15 @@ inputs:
   name:
     required: false
     default: first
+outputs:
+  outcome:
+    value: ${{ steps.result.outputs.name }}
 runs:
   using: 'composite'
   steps:
     - name: Print
       run: echo "This is my ${{ inputs.name }} composite custom action"
       shell: bash
-      
+    - name: Output
+      id: result
+      run: echo "name=venki" >> $GITHUB_OUTPUT
