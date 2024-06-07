@@ -22,4 +22,6 @@ jobs:
         run: echo "The output is ${{ needs.Test.outputs.outcome }}"
       - name: calling cutom action
         uses: ./.github/actions/customworkflows
+        with:
+          name: second
         
