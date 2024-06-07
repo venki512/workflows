@@ -2,9 +2,12 @@ name: Testing Outputs
 on: push
 jobs:
   Test:
+    strategy:
+      matrix:
+        runners: [ubuntu-latest, windows-latest]
     outputs:
       outcome: ${{ steps.result.outputs.name }}
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.runners }}
     steps:
       - name: Export output
         id: result
