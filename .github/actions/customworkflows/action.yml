@@ -16,3 +16,4 @@ runs:
     - name: Output
       id: result
       run: echo "name=venki" >> $GITHUB_OUTPUT
+      shell: bash
