@@ -1,0 +1,8 @@
+name: 'first-cstm-action'
+description: 'This is my first custom action'
+runs:
+  using: 'composite'
+  steps:
+    - name: Print
+      run: echo "This is my first composite custom action"
+      
