@@ -18,4 +18,6 @@ jobs:
     steps:  
       - name: Read output
         run: echo "The output is ${{ needs.Test.outputs.outcome }}"
+      - name: calling cutom action
+        uses: ./.github/actions/test
         
