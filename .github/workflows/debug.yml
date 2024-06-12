@@ -6,10 +6,10 @@ jobs:
     steps:
       - name: Print debug messages
         run: |
-          echo "::debug::Set the Octocat variable"
-          echo "::notice file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
-          echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
-          echo "::error::Missing semicolon"
+          # echo "::debug::Set the Octocat variable"
+          # echo "::notice file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+          # echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+          # echo "::error::Missing semicolon"
           echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
 
 
