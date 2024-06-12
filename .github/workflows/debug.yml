@@ -1,0 +1,9 @@
+name: Testing toolkit
+on: push
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print debug messages
+        run: |
+          echo "::debug::Set the Octocat variable"
