@@ -1,5 +1,5 @@
 name: Testing Outputs
-on: push
+on: workflow_dispatch
 jobs:
   Test:
     strategy:
