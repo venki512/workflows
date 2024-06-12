@@ -13,5 +13,5 @@ jobs:
           echo "::group::Test"
           echo "Test Group"
           echo "::endgroup::"
-          echo "::add-mask:: test"
+          echo "::add-mask::test"
 
