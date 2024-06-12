@@ -7,4 +7,4 @@ jobs:
       - name: Print debug messages
         run: |
           echo "::debug::Set the Octocat variable"
-          echo "::notice file={name},line={line},endLine={endLine},title={title}::{message}"
+
